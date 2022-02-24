@@ -1,7 +1,7 @@
 package com;
 
 
-public class EmployeeWage {
+public class EmployeeWageBuilder {
     int dailyWage;
     int fullDayHour = 8;
     int partTimeHour = 4;
@@ -11,7 +11,7 @@ public class EmployeeWage {
     int maxWorkingHours;
     int workedHours = 0;
 
-    EmployeeWage(int wagePerHour, int maxWorkingDays, int maxWorkingHours){
+    EmployeeWageBuilder(int wagePerHour, int maxWorkingDays, int maxWorkingHours){
         this.wagePerHour = wagePerHour;
         this.maxWorkingDays = maxWorkingDays;
         this.maxWorkingHours = maxWorkingHours;

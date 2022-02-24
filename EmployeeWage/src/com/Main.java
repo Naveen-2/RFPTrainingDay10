@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Program.");
-        Company company1 = new Company("Company A",50,22,150);
+        CompanyEmpWage company1 = new CompanyEmpWage("Company A",50,22,150);
         company1.calculateMonthlyWage();
-        Company company2 = new Company("Company B",40,26,230);
+        CompanyEmpWage company2 = new CompanyEmpWage("Company B",40,26,230);
         company2.calculateMonthlyWage();
     }
 }
