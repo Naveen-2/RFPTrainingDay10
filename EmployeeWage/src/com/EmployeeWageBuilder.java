@@ -1,7 +1,7 @@
 package com;
 
 
-public class EmployeeWage {
+public class EmployeeWageBuilder implements EmployeeWageInterface{
     int dailyWage;
     int fullDayHour = 8;
     int partTimeHour = 4;
@@ -11,13 +11,15 @@ public class EmployeeWage {
     int maxWorkingHours;
     int workedHours = 0;
 
-    EmployeeWage(int wagePerHour, int maxWorkingDays, int maxWorkingHours){
+
+    EmployeeWageBuilder(int wagePerHour, int maxWorkingDays, int maxWorkingHours){
         this.wagePerHour = wagePerHour;
         this.maxWorkingDays = maxWorkingDays;
         this.maxWorkingHours = maxWorkingHours;
     }
 
-    int isPresent(){
+
+    public int isPresent(){
         int isPresent = (int) Math.floor((Math.random() * 10) % 3);
         switch (isPresent) {
             case 1 -> {
@@ -35,7 +37,7 @@ public class EmployeeWage {
         return 0;
     }
 
-    int dailyWage(){
+    public int dailyWage(){
         dailyWage = 0;
         int isPresent = isPresent();
 
@@ -47,7 +49,7 @@ public class EmployeeWage {
         return dailyWage;
     }
 
-    void calculateMonthlyWage() {
+    public void calculateMonthlyWage() {
         int workedDays;
         for (workedDays = 1; workedDays <= maxWorkingDays && workedHours <= maxWorkingHours; ) {
             System.out.println("Day " + workedDays + ": Rs. " + dailyWage());
