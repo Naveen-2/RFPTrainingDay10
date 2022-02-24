@@ -11,11 +11,13 @@ public class EmployeeWageBuilder implements EmployeeWageInterface{
     int maxWorkingHours;
     int workedHours = 0;
 
+
     EmployeeWageBuilder(int wagePerHour, int maxWorkingDays, int maxWorkingHours){
         this.wagePerHour = wagePerHour;
         this.maxWorkingDays = maxWorkingDays;
         this.maxWorkingHours = maxWorkingHours;
     }
+
 
     public int isPresent(){
         int isPresent = (int) Math.floor((Math.random() * 10) % 3);
